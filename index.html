@@ -5,14 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy 21st Birthday Bipasha ❤️</title>
-<div class="letter-photo">
-  <img src="our-photo.jpg" alt="Our special memory">
-  <p>One of my favourite memories ❤️</p>
-</div>
 
 <style>
-*{box-sizing:border-box}
-body{
+* {
+ box-sizing:border-box;
+}
+
+body {
  margin:0;
  min-height:100vh;
  font-family:Georgia,serif;
@@ -21,15 +20,21 @@ body{
  text-align:center;
  overflow-x:hidden;
 }
-.screen{
+
+.screen {
  display:none;
  min-height:100vh;
  align-items:center;
  justify-content:center;
  padding:25px 15px;
 }
-.screen.active{display:flex;animation:fade 1s}
-.card{
+
+.screen.active {
+ display:flex;
+ animation:fade 1s;
+}
+
+.card {
  width:min(680px,100%);
  padding:35px 22px;
  border-radius:30px;
@@ -37,14 +42,23 @@ body{
  box-shadow:0 15px 50px #c76b9844;
  border:1px solid white;
 }
-h1{
+
+h1 {
  color:#e65391;
  font-size:clamp(38px,9vw,62px);
  line-height:1.1;
 }
-h2{color:#b65a91}
-p{font-size:17px;line-height:1.8}
-button{
+
+h2 {
+ color:#b65a91;
+}
+
+p {
+ font-size:17px;
+ line-height:1.8;
+}
+
+button {
  border:0;
  padding:14px 24px;
  border-radius:30px;
@@ -56,69 +70,91 @@ button{
  margin:8px;
  transition:.3s;
 }
-button:hover{transform:scale(1.07)}
-.secondary{
+
+button:hover {
+ transform:scale(1.07);
+}
+
+.secondary {
  background:#fff0f7;
  color:#b44d80;
  border:1px solid #e9b2cb;
 }
-.envelope{
+
+.envelope {
  font-size:110px;
  margin:20px;
  animation:bounce 2s infinite;
 }
-.couple{
+
+.couple {
  display:flex;
  justify-content:center;
  align-items:center;
  gap:12px;
  margin:25px 0;
 }
-.character{
+
+.character {
  font-size:75px;
  animation:bounce 2.5s infinite;
 }
-.character:nth-child(2){animation-delay:.7s}
-.cake{
+
+.character:nth-child(2) {
+ animation-delay:.7s;
+}
+
+.cake {
  font-size:85px;
  animation:bounce 2s infinite;
 }
-.letter{
+
+.letter {
  background:#fff4fa;
  padding:22px;
  border-radius:20px;
  border:1px dashed #e99abc;
  margin:20px 0;
 }
-.wishes{
+
+.wishes {
  display:grid;
  grid-template-columns:repeat(2,1fr);
  gap:12px;
  margin:25px 0;
 }
-.wish{
+
+.wish {
  padding:17px 8px;
  background:#fff0f7;
  border-radius:18px;
  font-size:16px;
  animation:bounce 3s infinite;
 }
-.wish span{font-size:35px;display:block;margin-bottom:7px}
-.heart{
+
+.wish span {
+ font-size:35px;
+ display:block;
+ margin-bottom:7px;
+}
+
+.heart {
  position:fixed;
  bottom:-40px;
  pointer-events:none;
  animation:rise 6s linear forwards;
  z-index:10;
 }
-.confetti{
+
+.confetti {
  position:fixed;
  top:-30px;
  pointer-events:none;
  animation:fall 4s linear forwards;
  z-index:10;
 }
-#music{
+
+#music {
  position:fixed;
  right:15px;
  bottom:15px;
@@ -129,30 +165,87 @@ button:hover{transform:scale(1.07)}
  padding:0;
  font-size:22px;
 }
-#candle{font-size:50px;cursor:pointer}
-.signature{
+
+#candle {
+ font-size:50px;
+ cursor:pointer;
+}
+
+.signature {
  color:#d65389;
  font-size:27px;
  font-style:italic;
 }
-@keyframes bounce{
- 0%,100%{transform:translateY(0)}
- 50%{transform:translateY(-12px)}
+
+/* PHOTO INSIDE THE BIRTHDAY LETTER */
+
+.letter-photo {
+ text-align:center;
+ margin:25px auto 10px;
 }
-@keyframes fade{
- from{opacity:0;transform:translateY(20px)}
- to{opacity:1;transform:translateY(0)}
+
+.letter-photo img {
+ width:85%;
+ max-width:280px;
+ height:300px;
+ object-fit:cover;
+ border-radius:18px;
+ border:5px solid white;
+ box-shadow:0 5px 18px rgba(0,0,0,0.2);
+ transform:rotate(-2deg);
 }
-@keyframes rise{
- to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+
+.letter-photo p {
+ color:#d45b83;
+ font-style:italic;
+ font-size:15px;
+ margin-top:15px;
 }
-@keyframes fall{
- to{transform:translateY(110vh) rotate(720deg);opacity:0}
+
+@keyframes bounce {
+ 0%,100% {
+  transform:translateY(0);
+ }
+ 50% {
+  transform:translateY(-12px);
+ }
 }
-@media(max-width:420px){
- .character{font-size:57px}
- .card{padding:28px 15px}
- .wishes{gap:8px}
+
+@keyframes fade {
+ from {
+  opacity:0;
+  transform:translateY(20px);
+ }
+ to {
+  opacity:1;
+  transform:translateY(0);
+ }
+}
+
+@keyframes rise {
+ to {
+  transform:translateY(-110vh) rotate(360deg);
+  opacity:0;
+ }
+}
+
+@keyframes fall {
+ to {
+  transform:translateY(110vh) rotate(720deg);
+  opacity:0;
+ }
+}
+
+@media(max-width:420px) {
+ .character {
+  font-size:57px;
+ }
+ .card {
+  padding:28px 15px;
+ }
+ .wishes {
+  gap:8px;
+ }
 }
 </style>
 </head>
@@ -210,6 +303,7 @@ button:hover{transform:scale(1.07)}
   <h1>Dear Bipasha ❤️</h1>
 
   <div class="letter">
+
    <p>
     Some people make ordinary days feel
     a little more special, and you're
@@ -235,7 +329,17 @@ button:hover{transform:scale(1.07)}
    </p>
 
    <h2>Happy Birthday, Bipasha! 🌷</h2>
-   <div class="signature">With a little extra affection ❤️</div>
+
+   <div class="signature">
+    With a little extra affection ❤️
+   </div>
+
+   <!-- YOUR PHOTO GOES HERE -->
+   <div class="letter-photo">
+    <img src="our-photo.jpg" alt="Our special memory">
+    <p>One of my favourite memories ❤️</p>
+   </div>
+
   </div>
 
   <button onclick="show('wishes')">More Surprises ✨</button>
@@ -288,10 +392,6 @@ button:hover{transform:scale(1.07)}
 
   <h2>With love and warm wishes,</h2>
   <div class="signature">Suzal ❤️</div>
-  <div class="letter-photo">
-  <img src="our-photo.jpg" alt="Our special memory">
-  <p>One of my favourite memories ❤️</p>
-</div>
 
   <p>Made with a little extra love, just for you.</p>
 
@@ -300,55 +400,64 @@ button:hover{transform:scale(1.07)}
 </section>
 
 <script>
-function show(id){
- document.querySelectorAll('.screen').forEach(s=>{
+function show(id) {
+ document.querySelectorAll('.screen').forEach(s => {
   s.classList.remove('active');
  });
+
  document.getElementById(id).classList.add('active');
  window.scrollTo(0,0);
  hearts(12);
 }
 
-function hearts(amount=25){
+function hearts(amount=25) {
  const icons=['💗','💕','🌸','✨','💖','🌷'];
- for(let i=0;i<amount;i++){
+
+ for(let i=0;i<amount;i++) {
   let h=document.createElement('div');
   h.className='heart';
   h.textContent=icons[Math.floor(Math.random()*icons.length)];
   h.style.left=Math.random()*100+'vw';
   h.style.fontSize=(18+Math.random()*25)+'px';
   h.style.animationDuration=(4+Math.random()*4)+'s';
+
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),8500);
  }
 }
 
-function confetti(){
+function confetti() {
  const icons=['🎉','✨','💖','🌸','🎊'];
- for(let i=0;i<60;i++){
+
+ for(let i=0;i<60;i++) {
   let c=document.createElement('div');
   c.className='confetti';
   c.textContent=icons[Math.floor(Math.random()*icons.length)];
   c.style.left=Math.random()*100+'vw';
   c.style.fontSize=(15+Math.random()*20)+'px';
   c.style.animationDuration=(3+Math.random()*3)+'s';
+
   document.body.appendChild(c);
   setTimeout(()=>c.remove(),6500);
  }
 }
 
-function openSurprise(){
+function openSurprise() {
  show('birthday');
  confetti();
 }
 
 let candleDone=false;
-function blowCandles(){
+
+function blowCandles() {
  if(candleDone)return;
+
  candleDone=true;
  document.getElementById('candle').textContent='💨✨';
+
  document.getElementById('candleText').textContent=
  'Your wish is on its way to the universe! 💖';
+
  confetti();
  hearts(45);
 }
@@ -357,38 +466,45 @@ let audio=null;
 let musicPlaying=false;
 let musicTimer=null;
 
-function chime(){
+function chime() {
  if(!audio)return;
+
  const notes=[523.25,659.25,783.99,659.25];
+
  notes.forEach((freq,i)=>{
   let osc=audio.createOscillator();
   let gain=audio.createGain();
+
   osc.type='sine';
   osc.frequency.value=freq;
   osc.connect(gain);
   gain.connect(audio.destination);
+
   let t=audio.currentTime+i*.3;
+
   gain.gain.setValueAtTime(.0001,t);
   gain.gain.exponentialRampToValueAtTime(.035,t+.04);
   gain.gain.exponentialRampToValueAtTime(.0001,t+.25);
+
   osc.start(t);
   osc.stop(t+.3);
  });
 }
 
-async function toggleMusic(){
- if(!audio){
+async function toggleMusic() {
+ if(!audio) {
   audio=new(window.AudioContext||window.webkitAudioContext)();
  }
+
  if(audio.state==='suspended')await audio.resume();
 
  musicPlaying=!musicPlaying;
 
- if(musicPlaying){
+ if(musicPlaying) {
   chime();
   musicTimer=setInterval(chime,1800);
   document.getElementById('music').textContent='♫';
- }else{
+ } else {
   clearInterval(musicTimer);
   document.getElementById('music').textContent='♪';
  }
@@ -401,4 +517,3 @@ setInterval(()=>{
 
 </body>
 </html>
-
