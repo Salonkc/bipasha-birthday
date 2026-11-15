@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 21st Birthday Bipasha ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ min-height:100vh;
+ font-family:Georgia,serif;
+ color:#804365;
+ background:linear-gradient(135deg,#ffe0ed,#fce5ff,#fff0dc);
+ text-align:center;
+ overflow-x:hidden;
+}
+.screen{
+ display:none;
+ min-height:100vh;
+ align-items:center;
+ justify-content:center;
+ padding:25px 15px;
+}
+.screen.active{display:flex;animation:fade 1s}
+.card{
+ width:min(680px,100%);
+ padding:35px 22px;
+ border-radius:30px;
+ background:#ffffffd9;
+ box-shadow:0 15px 50px #c76b9844;
+ border:1px solid white;
+}
+h1{
+ color:#e65391;
+ font-size:clamp(38px,9vw,62px);
+ line-height:1.1;
+}
+h2{color:#b65a91}
+p{font-size:17px;line-height:1.8}
+button{
+ border:0;
+ padding:14px 24px;
+ border-radius:30px;
+ background:linear-gradient(90deg,#f16e9c,#ae79d4);
+ color:white;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ margin:8px;
+ transition:.3s;
+}
+button:hover{transform:scale(1.07)}
+.secondary{
+ background:#fff0f7;
+ color:#b44d80;
+ border:1px solid #e9b2cb;
+}
+.envelope{
+ font-size:110px;
+ margin:20px;
+ animation:bounce 2s infinite;
+}
+.couple{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:12px;
+ margin:25px 0;
+}
+.character{
+ font-size:75px;
+ animation:bounce 2.5s infinite;
+}
+.character:nth-child(2){animation-delay:.7s}
+.cake{
+ font-size:85px;
+ animation:bounce 2s infinite;
+}
+.letter{
+ background:#fff4fa;
+ padding:22px;
+ border-radius:20px;
+ border:1px dashed #e99abc;
+ margin:20px 0;
+}
+.wishes{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+ margin:25px 0;
+}
+.wish{
+ padding:17px 8px;
+ background:#fff0f7;
+ border-radius:18px;
+ font-size:16px;
+ animation:bounce 3s infinite;
+}
+.wish span{font-size:35px;display:block;margin-bottom:7px}
+.heart{
+ position:fixed;
+ bottom:-40px;
+ pointer-events:none;
+ animation:rise 6s linear forwards;
+ z-index:10;
+}
+.confetti{
+ position:fixed;
+ top:-30px;
+ pointer-events:none;
+ animation:fall 4s linear forwards;
+ z-index:10;
+}
+#music{
+ position:fixed;
+ right:15px;
+ bottom:15px;
+ z-index:20;
+ border-radius:50%;
+ width:52px;
+ height:52px;
+ padding:0;
+ font-size:22px;
+}
+#candle{font-size:50px;cursor:pointer}
+.signature{
+ color:#d65389;
+ font-size:27px;
+ font-style:italic;
+}
+@keyframes bounce{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-12px)}
+}
+@keyframes fade{
+ from{opacity:0;transform:translateY(20px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@keyframes rise{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+@media(max-width:420px){
+ .character{font-size:57px}
+ .card{padding:28px 15px}
+ .wishes{gap:8px}
+}
+</style>
+</head>
+
+<body>
+
+<button id="music" onclick="toggleMusic()">♫</button>
+
+<!-- OPENING SCREEN -->
+<section class="screen active" id="welcome">
+ <div class="card">
+  <p>✨ A LITTLE SURPRISE FOR SOMEONE SPECIAL ✨</p>
+  <div class="envelope">💌</div>
+  <h1>Hey Bipasha!</h1>
+  <p>Someone has prepared something beautiful for you...</p>
+  <button onclick="openSurprise()">Open Your Surprise 💗</button>
+  <p>Tap to begin your birthday story 🌷</p>
+ </div>
+</section>
+
+<!-- BIRTHDAY SCREEN -->
+<section class="screen" id="birthday">
+ <div class="card">
+  <p>🌸 TODAY IS ALL ABOUT YOU 🌸</p>
+  <h1>Happy 21st Birthday<br>Bipasha! ❤️</h1>
+  <h2>Chapter 21 Begins ✨</h2>
+
+  <div class="couple">
+   <div class="character">👦🏻</div>
+   <div class="character">💗</div>
+   <div class="character">👧🏻</div>
+  </div>
+
+  <div class="cake">🎂</div>
+
+  <p>
+   21 years of beautiful existence!<br>
+   A new chapter, a new adventure,
+   and countless reasons to smile.
+  </p>
+
+  <h2>Make a Birthday Wish 🕯️</h2>
+  <div id="candle" onclick="blowCandles()">🕯️🕯️🕯️</div>
+  <p id="candleText">Tap the candles to make your wish!</p>
+
+  <button onclick="show('letter')">Read Your Letter 💌</button>
+  <button class="secondary" onclick="show('wishes')">Little Birthday Wishes 🌸</button>
+ </div>
+</section>
+
+<!-- LETTER SCREEN -->
+<section class="screen" id="letter">
+ <div class="card">
+  <p>💌 A LITTLE NOTE FROM THE HEART</p>
+  <h1>Dear Bipasha ❤️</h1>
+
+  <div class="letter">
+   <p>
+    Some people make ordinary days feel
+    a little more special, and you're
+    one of those people.
+   </p>
+
+   <p>
+    I hope your birthday brings you
+    endless smiles, beautiful memories,
+    and all the happiness your heart deserves.
+   </p>
+
+   <p>
+    Never stop smiling, keep shining,
+    and always remember that someone
+    is wishing you the very best.
+   </p>
+
+   <p>
+    May your 21st year be full of
+    exciting adventures and dreams
+    coming true.
+   </p>
+
+   <h2>Happy Birthday, Bipasha! 🌷</h2>
+   <div class="signature">With a little extra affection ❤️</div>
+  </div>
+
+  <button onclick="show('wishes')">More Surprises ✨</button>
+  <button class="secondary" onclick="show('birthday')">Back</button>
+ </div>
+</section>
+
+<!-- WISHES SCREEN -->
+<section class="screen" id="wishes">
+ <div class="card">
+  <p>🌷 YOUR 21ST BIRTHDAY WISHES 🌷</p>
+  <h1>May your year be full of...</h1>
+
+  <div class="wishes">
+   <div class="wish"><span>🌈</span>Bright Days</div>
+   <div class="wish"><span>😂</span>Endless Laughter</div>
+   <div class="wish"><span>🌸</span>Beautiful Memories</div>
+   <div class="wish"><span>⭐</span>Dreams Coming True</div>
+   <div class="wish"><span>🧸</span>Warm Hugs</div>
+   <div class="wish"><span>💖</span>Lots of Love</div>
+  </div>
+
+  <p>You deserve every beautiful thing life has to offer.</p>
+
+  <button onclick="show('final')">One Last Surprise 🎁</button>
+  <button class="secondary" onclick="show('letter')">Read Letter Again</button>
+ </div>
+</section>
+
+<!-- FINAL SCREEN -->
+<section class="screen" id="final">
+ <div class="card">
+  <div style="font-size:75px">🎀💐💖</div>
+
+  <h1>Chapter 21 Begins!</h1>
+  <h2>Happy Birthday, Bipasha! 🎂</h2>
+
+  <p>
+   May this new chapter bring you
+   more happiness, unforgettable moments,
+   exciting adventures and countless smiles.
+  </p>
+
+  <p>
+   Keep smiling, keep shining,
+   and never stop being you. ❤️
+  </p>
+
+  <div style="font-size:45px">🌷✨🧸</div>
+
+  <h2>With love and warm wishes,</h2>
+  <div class="signature">Suzal ❤️</div>
+
+  <p>Made with a little extra love, just for you.</p>
+
+  <button onclick="location.reload()">Experience Again ↻</button>
+ </div>
+</section>
+
+<script>
+function show(id){
+ document.querySelectorAll('.screen').forEach(s=>{
+  s.classList.remove('active');
+ });
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
+ hearts(12);
+}
+
+function hearts(amount=25){
+ const icons=['💗','💕','🌸','✨','💖','🌷'];
+ for(let i=0;i<amount;i++){
+  let h=document.createElement('div');
+  h.className='heart';
+  h.textContent=icons[Math.floor(Math.random()*icons.length)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(18+Math.random()*25)+'px';
+  h.style.animationDuration=(4+Math.random()*4)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8500);
+ }
+}
+
+function confetti(){
+ const icons=['🎉','✨','💖','🌸','🎊'];
+ for(let i=0;i<60;i++){
+  let c=document.createElement('div');
+  c.className='confetti';
+  c.textContent=icons[Math.floor(Math.random()*icons.length)];
+  c.style.left=Math.random()*100+'vw';
+  c.style.fontSize=(15+Math.random()*20)+'px';
+  c.style.animationDuration=(3+Math.random()*3)+'s';
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),6500);
+ }
+}
+
+function openSurprise(){
+ show('birthday');
+ confetti();
+}
+
+let candleDone=false;
+function blowCandles(){
+ if(candleDone)return;
+ candleDone=true;
+ document.getElementById('candle').textContent='💨✨';
+ document.getElementById('candleText').textContent=
+ 'Your wish is on its way to the universe! 💖';
+ confetti();
+ hearts(45);
+}
+
+let audio=null;
+let musicPlaying=false;
+let musicTimer=null;
+
+function chime(){
+ if(!audio)return;
+ const notes=[523.25,659.25,783.99,659.25];
+ notes.forEach((freq,i)=>{
+  let osc=audio.createOscillator();
+  let gain=audio.createGain();
+  osc.type='sine';
+  osc.frequency.value=freq;
+  osc.connect(gain);
+  gain.connect(audio.destination);
+  let t=audio.currentTime+i*.3;
+  gain.gain.setValueAtTime(.0001,t);
+  gain.gain.exponentialRampToValueAtTime(.035,t+.04);
+  gain.gain.exponentialRampToValueAtTime(.0001,t+.25);
+  osc.start(t);
+  osc.stop(t+.3);
+ });
+}
+
+async function toggleMusic(){
+ if(!audio){
+  audio=new(window.AudioContext||window.webkitAudioContext)();
+ }
+ if(audio.state==='suspended')await audio.resume();
+
+ musicPlaying=!musicPlaying;
+
+ if(musicPlaying){
+  chime();
+  musicTimer=setInterval(chime,1800);
+  document.getElementById('music').textContent='♫';
+ }else{
+  clearInterval(musicTimer);
+  document.getElementById('music').textContent='♪';
+ }
+}
+
+setInterval(()=>{
+ if(Math.random()>.5)hearts(1);
+},1500);
+</script>
+
+</body>
+</html>
